@@ -1,0 +1,6 @@
+api.sql
+pm.sql
+.env
+
+node_modules
+package-lock.json
