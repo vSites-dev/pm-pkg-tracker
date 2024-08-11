@@ -1,5 +1,6 @@
 api.sql
 pm.sql
+pm_schema.sql
 .env
 
 node_modules
