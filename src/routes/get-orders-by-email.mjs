@@ -1,8 +1,5 @@
 import express from "express";
-import { config } from "dotenv";
-import db from "../db.js";
-
-config();
+import db from "../db.mjs";
 
 const router = express.Router();
 

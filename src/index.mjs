@@ -1,11 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import getOrdersByEmail from "./routes/get-orders-by-email.js";
-import { config } from "dotenv";
-import { closePool } from "./db.js";
-
-config();
+import getOrdersByEmail from "./routes/get-orders-by-email.mjs";
+import { closePool } from "./db.mjs";
 
 const app = express();
 
@@ -16,7 +13,7 @@ app.use(cors());
 // app.post("/get-orders-by-email",)
 app.use("/get-orders-by-email", getOrdersByEmail);
 
-const port = process.env.PORT ?? 5555;
+const port = process.env.PORT || 8443;
 
 const server = app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
